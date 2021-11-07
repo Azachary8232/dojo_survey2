@@ -9,8 +9,36 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/style.css')}}">
 </head>
 <body>
-
-
+    <div class="container mt-5 p-5">
+        <div class="block2">
+            <form action="" method="post">
+                <div class="input-group mb-3">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Full Name</span>
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="first_name">
+                </div>  
+                <select class="my-2 form-select" aria-label="Default select example">
+                    <option selected>Dojo Location</option>
+                    <option value="1">Seattle</option>
+                    <option value="2">Portland</option>
+                    <option value="3">Boise</option>
+                </select>
+                <select class=" my-4 form-select" aria-label="Default select example">
+                    <option selected>Favorite Language</option>
+                    <option value="1">Python</option>
+                    <option value="2">MERN</option>
+                    <option value="3">Java</option>
+                </select>
+                <div class=" my-4 mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                <div class="flex flex-end">
+                    <button type="button" class="btn btn-primary btn2">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
 
 
 <script src="/flask_app/static/js/script.js"></script>

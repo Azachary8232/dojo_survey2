@@ -9,7 +9,7 @@
     width: 75%;
 }
 .lego{
-    border: 1px solid black;
+    border: 3px solid black;
 }
 .marginAuto{
     margin: auto;
@@ -38,6 +38,9 @@ display: flex;
 .flex{
     flex: 6;
 }
+.flex-end{
+    justify-content: end;
+}
 .spaceAround{
     justify-content: space-around;
 }
@@ -58,4 +61,15 @@ display: flex;
 }
 .inlineBlock{
     display: inline-block;
+}
+.btn2{
+    box-shadow: 2px 3px black;
+}
+
+
+.block2{
+    width: 75%;
+    height: 400px;
+    border: 3px solid black;
+    padding: 25px;
 }

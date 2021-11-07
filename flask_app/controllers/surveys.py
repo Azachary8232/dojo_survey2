@@ -6,5 +6,5 @@ from flask_app.models.model_survey import Survey
 
 @app.route('/')
 def survey():
-    return render_template('survey.html')
+    return render_template('survey_results.html')
 
