@@ -11,29 +11,29 @@
 <body>
     <div class="container mt-5 p-5">
         <div class="block2">
-            <form action="" method="post">
+            <form action="/create" method="post">
                 <div class="input-group mb-3">
                     <span class="input-group-text" id="inputGroup-sizing-default">Full Name</span>
-                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="first_name">
+                    <input type="text" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" name="name">
                 </div>  
-                <select class="my-2 form-select" aria-label="Default select example">
+                <select class="my-2 form-select" aria-label="Default select example" name="dojo_location">
                     <option selected>Dojo Location</option>
-                    <option value="1">Seattle</option>
-                    <option value="2">Portland</option>
-                    <option value="3">Boise</option>
+                    <option value="Seattle">Seattle</option>
+                    <option value="Portland">Portland</option>
+                    <option value="Boise">Boise</option>
                 </select>
-                <select class=" my-4 form-select" aria-label="Default select example">
+                <select class=" my-4 form-select" aria-label="Default select example" name="fav_language">
                     <option selected>Favorite Language</option>
-                    <option value="1">Python</option>
-                    <option value="2">MERN</option>
-                    <option value="3">Java</option>
+                    <option value="Python">Python</option>
+                    <option value="MERN">MERN</option>
+                    <option value="Java">Java</option>
                 </select>
                 <div class=" my-4 mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" name="comments"></textarea>
                 </div>
                 <div class="flex flex-end">
-                    <button type="button" class="btn btn-primary btn2">Submit</button>
+                    <button type="submit" class="btn btn-primary btn2">Submit</button>
                 </div>
             </form>
         </div>
