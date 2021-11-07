@@ -1,4 +1,4 @@
-from flask_app.controllers import (userS/no())
+from flask_app.controllers import surveys
 from flask_app import app
 
 
