@@ -20,6 +20,12 @@ class Survey():
         if len(ninja['name']) < 1: 
             flash("Name must be included.")
             is_valid = False  #-- use different if statement for all inputs
+        if len(ninja['location']) < 2: 
+            flash("Location must be included.")
+            is_valid = False  #-- use different if statement for all inputs
+        if len(ninja['location']) < 2: 
+            flash("Language must be included.")
+            is_valid = False  #-- use different if statement for all inputs
         return is_valid   
 
 
