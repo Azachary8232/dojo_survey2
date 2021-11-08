@@ -9,14 +9,19 @@ def survey():
     return render_template('survey.html')
 
 @app.route('/create', methods=['POST'])
-def create_survey():
-    session['name'] = request.form['name']
-    session['location'] = request.form['dojo_location']
-    session['fav_language'] = request.form['fav_language']
-    session['comments'] = request.form['comments']
-    print(session['name'])
-    return redirect('/survey_results')
+def create():
+    data = {
+        "name" : request.form['name'],
+        "location" : request.form['location'],
+        "language" : request.form['language'],
+        "comment" : request.form['comment']
+    }
+    print(data)
+    id = Survey.create(data)
+    return redirect(f'/survey_results/{id}')
 
-@app.route('/survey_results')
-def display_results():
-    return render_template('survey_results.html')
+@app.route('/survey_results/<int:id>')
+def display_results(id):
+    data = { 'id' : id }
+    ninja = Survey.get_one(data)
+    return render_template('survey_results.html', ninja = ninja)

@@ -7,15 +7,29 @@ from flask import flash
 class Survey():
     def __init__(self,data):
         self.id = data['id']
-
+        self.name = data['name']
+        self.location = data['location']
+        self.language = data['language']
+        self.comment = data['comment']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
 
     # ***CREATE***
 
+    @classmethod
+    def create(cls,data):
+        query = "INSERT INTO ninjas (name, location, language, comment) VALUES (%(name)s, %(location)s, %(language)s, %(comment)s);"
+        ninja_id = connectToMySQL('dojo_survey_schema').query_db(query,data)
+        return ninja_id
+
 
     # ***Retreive***
 
+    @classmethod
+    def get_one(cls,data):
+        query = "SELECT * FROM ninjas WHERE id = %(id)s;"
+        ninja = connectToMySQL('dojo_survey_schema').query_db(query,data)
+        return cls(ninja[0])
 
     # ***Update***
 
