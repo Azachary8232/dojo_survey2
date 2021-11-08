@@ -13,6 +13,15 @@ class Survey():
         self.comment = data['comment']
         self.created_at = data['created_at']
         self.updated_at = data['updated_at']
+        
+    @staticmethod
+    def vaildate_info(ninja):
+        is_valid = True # we assume this is true
+        if len(ninja['name']) < 1: 
+            flash("Name must be included.")
+            is_valid = False  #-- use different if statement for all inputs
+        return is_valid   
+
 
     # ***CREATE***
 

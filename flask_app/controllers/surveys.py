@@ -10,6 +10,8 @@ def survey():
 
 @app.route('/create', methods=['POST'])
 def create():
+    if not Survey.vaildate_info(request.form):
+        return redirect('/')
     data = {
         "name" : request.form['name'],
         "location" : request.form['location'],
